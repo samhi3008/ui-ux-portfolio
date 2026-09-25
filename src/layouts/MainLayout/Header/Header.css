@@ -1,0 +1,112 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #e8e8ee;
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(12px);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1120px, calc(100% - 3rem));
+  min-height: 4.75rem;
+  margin: 0 auto;
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #171720;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.site-logo__mark {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 0.55rem;
+  background: #171720;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.site-nav__link,
+.site-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 0.8rem;
+  border-radius: 0.45rem;
+  color: #5f5f6a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.site-nav__link:hover,
+.site-nav__link--active {
+  background: #f2f2f6;
+  color: #171720;
+}
+
+.site-nav__cta {
+  margin-left: 0.55rem;
+  background: #171720;
+  color: #fff;
+}
+
+.site-nav__cta:hover { background: #525263; color: #fff; }
+
+.site-header__menu-toggle { display: none; }
+
+@media (max-width: 640px) {
+  .site-header__inner { width: min(100% - 2rem, 1120px); min-height: 4.25rem; }
+
+  .site-header__menu-toggle {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border: 0;
+    border-radius: 0.45rem;
+    background: #f2f2f6;
+    color: #171720;
+    cursor: pointer;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 0.65rem;
+    border: 1px solid #e8e8ee;
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 14px 35px rgb(23 23 32 / 12%);
+  }
+
+  .site-nav--open { display: flex; }
+  .site-nav__link, .site-nav__cta { justify-content: center; }
+  .site-nav__cta { margin: 0.3rem 0 0; }
+}

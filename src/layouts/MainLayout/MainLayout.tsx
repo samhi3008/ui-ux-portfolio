@@ -1,12 +1,16 @@
 import "./MainLayout.css";
-import App from "../../App.tsx";
+import Header from "./Header/Header.tsx";
+import Footer from "./Footer/Footer.tsx";
+import { Outlet, useLocation } from "react-router";
 
 export default function MainLayout() {
-    return (<>
-        <header></header>
-        <App />
-        <footer></footer>
+  const { pathname } = useLocation();
+  const showFooter = pathname !== "/contact";
+  return (
+    <>
+      <Header />
+      <Outlet />
+      {showFooter && <Footer />}
     </>
-
-    );
+  );
 }
