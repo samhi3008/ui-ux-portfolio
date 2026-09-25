@@ -10,6 +10,7 @@ export default function MainLayout() {
 
   useEffect(() => {
     document.body.classList.add("is-preload");
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
     const preloadTimer = window.setTimeout(() => {
       document.body.classList.remove("is-preload");

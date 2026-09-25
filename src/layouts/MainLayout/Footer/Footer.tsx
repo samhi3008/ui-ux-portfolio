@@ -22,8 +22,8 @@ export default function Footer() {
 
         <div className="site-footer__bottom">
           <div>
-            <NavLink to="/" className="site-footer__brand">Samhita Nagamalli</NavLink>
-            <p className="site-footer__copyright">© {new Date().getFullYear()} Samhita Nagamalli. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p className="site-footer__copyright">© {new Date().getFullYear()} Samhita. All rights reserved.</p>
+            <p className="site-footer__copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
           </div>
           <div className="site-footer__links">
             <nav className="site-footer__nav" aria-label="Footer navigation">
