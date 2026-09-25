@@ -20,14 +20,6 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-			console.log("loaded");
-		});
-
 	// Browser fixes.
 
 		// IE: Flexbox min-height bug.

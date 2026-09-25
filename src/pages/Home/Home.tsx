@@ -2,7 +2,7 @@ import "./Home.css";
 
 export default function Home() {
   return (
-    <body className="is-preload">
+    <>
 
 		{/* Wrapper */}
 			<div id="wrapper" className="divided">
@@ -10,56 +10,56 @@ export default function Home() {
 				{/* One */}
 					<section className="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div className="content">
-							<h1>Story</h1>
-							<p className="major">A (modular, highly tweakable) responsive one-page template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a>.</p>
+							<h1>Samhita Nagamalli</h1>
+							<p className="major">Lead Frontend Engineer specializing in React, TypeScript, AI applications, and Azure.</p>
 							<ul className="actions stacked">
-								<li><a href="#first" className="button big wide smooth-scroll-middle">Get Started</a></li>
+								<li><a href="/projects" className="button big wide smooth-scroll-middle">Explore my experience</a></li>
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/banner.jpg" alt="" />
+							<img src="./src/images/samhita.jpg" alt="" />
 						</div>
 					</section>
 
 				{/* Two */}
 					<section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div className="content">
-							<h2>Magna etiam feugiat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<h2>Enterprise frontend delivery</h2>
+							<p>I own end-to-end frontend delivery for enterprise web applications, translating business requirements into scalable, accessible, and high-performing user experiences.</p>
 							<ul className="actions stacked">
-								<li><a href="#" className="button">Learn More</a></li>
+								<li><a href="/projects" className="button">Learn More</a></li>
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/spotlight01.jpg" alt="" />
+							<img src="./src/images/web-app.png" alt="" />
 						</div>
 					</section>
 
 				{/* Three */}
 					<section className="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div className="content">
-							<h2>Tempus adipiscing</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<h2>Accessible, maintainable systems</h2>
+							<p>I build reusable React and TypeScript component architectures and lead WCAG accessibility and performance improvements across applications.</p>
 							<ul className="actions stacked">
-								<li><a href="#" className="button">Learn More</a></li>
+								<li><a href="/projects" className="button">Learn More</a></li>
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/spotlight02.jpg" alt="" />
+							<img src="./src/images/wcag.jpg" alt="" />
 						</div>
 					</section>
 
 				{/* Four */}
 					<section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div className="content">
-							<h2>Pharetra etiam nulla</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<h2>AI application development</h2>
+							<p>I led end-to-end frontend development of a React-based AI chat application, from Figma UX design through API integration, Azure DevOps CI/CD, and Azure deployment.</p>
 							<ul className="actions stacked">
-								<li><a href="#" className="button">Learn More</a></li>
+								<li><a href="/projects" className="button">Learn More</a></li>
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/spotlight03.jpg" alt="" />
+							<img src="./src/images/ai-app.png" alt="" />
 						</div>
 					</section>
 
@@ -88,6 +88,6 @@ export default function Home() {
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
+	</>
   );
 }

@@ -22,14 +22,14 @@ export default function Footer() {
 
         <div className="site-footer__bottom">
           <div>
-            <NavLink to="/" className="site-footer__brand">Portfolio</NavLink>
-            <p className="site-footer__copyright">© {new Date().getFullYear()} Portfolio. All rights reserved.</p>
+            <NavLink to="/" className="site-footer__brand">Samhita Nagamalli</NavLink>
+            <p className="site-footer__copyright">© {new Date().getFullYear()} Samhita Nagamalli. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
           </div>
           <div className="site-footer__links">
             <nav className="site-footer__nav" aria-label="Footer navigation">
               {navigation.map(({ label, to }) => <NavLink key={to} to={to}>{label}</NavLink>)}
             </nav>
-            <a className="site-footer__email" href="mailto:hello@example.com"><Mail size={16} aria-hidden="true" /> hello@example.com</a>
+            <a className="site-footer__email" href="mailto:nsamhita2194@gmail.com"><Mail size={16} aria-hidden="true" /> nsamhita2194@gmail.com</a>
           </div>
         </div>
       </div>

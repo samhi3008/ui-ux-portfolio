@@ -1,128 +1,36 @@
+const expertise = [
+  ["fa-gem", "React & TypeScript", "I build reusable component architectures that improve UI consistency, development efficiency, and maintainability."],
+  ["fa-code", "JavaScript, HTML & CSS", "Experienced with modern JavaScript, HTML5, CSS3, Bootstrap, responsive design, and cross-browser compatibility."],
+  ["fa-pencil-ruler", "UX & Figma", "I translate business requirements into user flows, UX designs, and Figma prototypes."],
+  ["fa-cubes", "Design systems", "I apply design systems and component architecture to create scalable frontend foundations."],
+  ["fa-universal-access", "Accessibility", "Led WCAG accessibility initiatives using tools such as axe DevTools; improved accessibility audit scores from 38% to 90%."],
+  ["fa-tachometer-alt", "Performance", "Optimized frontend performance and consistently achieved PageSpeed scores of 85–90."],
+  ["fa-cloud", "Azure & CI/CD", "Implemented Azure DevOps CI/CD pipelines and deployed applications through Azure Portal for lower orgs."],
+  ["fa-layer-group", "Enterprise platforms", "Experienced with Sitecore, Salesforce Experience Cloud, AEM, and SAP Hybris."],
+  ["fa-vial", "Quality engineering", "I use Git, Jira, BrowserStack, and Sauce Labs to support reliable, high-quality frontend releases."],
+  ["fa-robot", "AI applications", "Led the frontend development of a React-based AI chat application from UX design through API integration and deployment."],
+  ["fa-users", "Technical leadership", "I currently serve as a frontend subject-matter expert and also help in evaluating UI candidates for projects."],
+  ["fa-award", "Recognition", "Recipient of the Star Award for individual contribution and the Team ACE Award for project excellence and business impact."],
+];
+
 export default function About() {
   return (
-    <>
-      {/* Six */}
-      <section className="wrapper style1 align-center">
-        <div className="inner">
-          <h2>Ipsum sed consequat</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id
-            ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis
-            laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus,
-            pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.
-          </p>
-          <div className="items style1 medium onscroll-fade-in">
-            <section>
-              <span className="icon style2 major fa-gem"></span>
-              <h3>Lorem</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
+    <section className="wrapper style1 align-center">
+      <div className="inner">
+        <h2>About Samhita</h2>
+        <p>
+          Lead Frontend Engineer at Accenture with 11 years of experience delivering enterprise web applications. I specialize in React, TypeScript, accessible user experiences, performance optimization, AI applications, and Azure.
+        </p>
+        <div className="items style1 medium onscroll-fade-in">
+          {expertise.map(([icon, title, description]) => (
+            <section key={title}>
+              <span className={`icon solid style2 major ${icon}`}></span>
+              <h3>{title}</h3>
+              <p>{description}</p>
             </section>
-            <section>
-              <span className="icon solid style2 major fa-save"></span>
-              <h3>Ipsum</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-chart-bar"></span>
-              <h3>Dolor</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-wifi"></span>
-              <h3>Amet</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-cog"></span>
-              <h3>Magna</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon style2 major fa-paper-plane"></span>
-              <h3>Tempus</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-desktop"></span>
-              <h3>Aliquam</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-sync-alt"></span>
-              <h3>Elit</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-hashtag"></span>
-              <h3>Morbi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-bolt"></span>
-              <h3>Turpis</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-envelope"></span>
-              <h3>Ultrices</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-            <section>
-              <span className="icon solid style2 major fa-leaf"></span>
-              <h3>Risus</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                dui turpis, cursus eget orci amet aliquam congue semper. Etiam
-                eget ultrices risus nec tempor elit.
-              </p>
-            </section>
-          </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

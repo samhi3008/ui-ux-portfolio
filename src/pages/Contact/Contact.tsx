@@ -3,6 +3,7 @@ export default function Contact() {
     <section className="wrapper style1 align-center">
       <div className="inner medium">
         <h2>Get in touch</h2>
+        <p>Based in Hyderabad, Telangana, India. Open to relocation</p>
         <form method="post" action="#">
           <div className="fields">
             <div className="field half">
