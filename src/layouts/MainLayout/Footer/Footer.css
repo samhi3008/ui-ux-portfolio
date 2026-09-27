@@ -1,6 +1,7 @@
 .site-footer {
   background: #171720;
   color: #f8f8fa;
+  margin-top: 4.5rem;
 }
 .site-footer__inner {
   width: min(1120px, calc(100% - 3rem));

@@ -30,6 +30,7 @@ export default function Contact() {
             </li>
           </ul>
         </form>
+        <p>Or reach out via <a href="mailto:nsamhita2194@gmail.com">Email</a> or <a href="tel:+91-9618922092">Phone</a></p>
       </div>
     </section>
   );
