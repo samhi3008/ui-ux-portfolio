@@ -17,7 +17,7 @@ export default function Home() {
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/samhita.jpg" alt="" />
+							<img src="./images/samhita.jpg" alt="" />
 						</div>
 					</section>
 
@@ -31,7 +31,7 @@ export default function Home() {
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/web-app.png" alt="" />
+							<img src="./images/web-app.png" alt="" />
 						</div>
 					</section>
 
@@ -45,7 +45,7 @@ export default function Home() {
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/wcag.jpg" alt="" />
+							<img src="./images/wcag.jpg" alt="" />
 						</div>
 					</section>
 
@@ -59,7 +59,7 @@ export default function Home() {
 							</ul>
 						</div>
 						<div className="image">
-							<img src="./src/images/ai-app.png" alt="" />
+							<img src="./images/ai-app.png" alt="" />
 						</div>
 					</section>
 

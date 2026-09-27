@@ -149,11 +149,11 @@ export default function Projects() {
 
         <div ref={scrollAreaRef} className="inner">
           {projects.map(({ imageId, title, url, description }) => {
-            const image = `./src/images/gallery/thumbs/${imageId}.png`;
+            const image = `./images/gallery/thumbs/${imageId}.png`;
             return (
               <article key={title}>
                 <a href={image} className="image" onClick={(event) => { event.preventDefault(); openLightbox(image); }}>
-                  <img src={`./src/images/gallery/thumbs/${imageId}.png`} alt={title} />
+                  <img src={`./images/gallery/thumbs/${imageId}.png`} alt={title} />
                 </a>
                 <div className="caption">
                   <h3>{title}</h3>
