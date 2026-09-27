@@ -6,7 +6,7 @@ import "@fontsource/inter";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/ui-ux-portfolio">
+    <BrowserRouter basename="/ui-ux-portfolio/">
       <App />
     </BrowserRouter>
   </StrictMode>,
