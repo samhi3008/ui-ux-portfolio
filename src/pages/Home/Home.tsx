@@ -11,7 +11,7 @@ export default function Home() {
 					<section className="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div className="content">
 							<h1>Samhita Nagamalli</h1>
-							<p className="major">Lead Frontend Engineer specializing in React, TypeScript, AI applications, and Azure.</p>
+							<p className="major">Lead Frontend Engineer with 11 years of experience in Frontend Development, specializing in React, TypeScript, JavaScript, Accessibility, Performance Optimization, Responsive Design, and Reusable component architecture.</p>
 							<ul className="actions stacked">
 								<li><a href="/projects" className="button big wide smooth-scroll-middle">Explore my experience</a></li>
 							</ul>
@@ -26,9 +26,6 @@ export default function Home() {
 						<div className="content">
 							<h2>Enterprise frontend delivery</h2>
 							<p>I own end-to-end frontend delivery for enterprise web applications, translating business requirements into scalable, accessible, and high-performing user experiences.</p>
-							<ul className="actions stacked">
-								<li><a href="/projects" className="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div className="image">
 							<img src="./images/web-app.png" alt="" />
@@ -40,9 +37,6 @@ export default function Home() {
 						<div className="content">
 							<h2>Accessible, maintainable systems</h2>
 							<p>I build reusable React and TypeScript component architectures and lead WCAG accessibility and performance improvements across applications.</p>
-							<ul className="actions stacked">
-								<li><a href="/projects" className="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div className="image">
 							<img src="./images/wcag.jpg" alt="" />
@@ -54,9 +48,6 @@ export default function Home() {
 						<div className="content">
 							<h2>AI application development</h2>
 							<p>I led end-to-end frontend development of a React-based AI chat application, from Figma UX design through API integration, Azure DevOps CI/CD, and Azure deployment.</p>
-							<ul className="actions stacked">
-								<li><a href="/projects" className="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div className="image">
 							<img src="./images/ai-app.png" alt="" />

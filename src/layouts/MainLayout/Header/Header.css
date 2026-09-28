@@ -84,10 +84,12 @@
     height: 2.5rem;
     place-items: center;
     border: 0;
+    box-shadow: none;
     border-radius: 0.45rem;
-    background: #f2f2f6;
+    background: none;
     color: #171720;
     cursor: pointer;
+    padding: 0;
   }
 
   .site-nav {
