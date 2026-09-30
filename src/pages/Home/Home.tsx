@@ -1,4 +1,5 @@
 import "./Home.css";
+import { NavLink } from "react-router";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
 							<h1>Samhita Nagamalli</h1>
 							<p className="major">Lead Frontend Engineer with 11 years of experience in Frontend Development, specializing in React, TypeScript, JavaScript, Accessibility, Performance Optimization, Responsive Design, and Reusable component architecture.</p>
 							<ul className="actions stacked">
-								<li><a href="/projects" className="button big wide smooth-scroll-middle">Explore my experience</a></li>
+								<li><NavLink to="/projects" className="button big wide smooth-scroll-middle">Explore my experience</NavLink></li>
 							</ul>
 						</div>
 						<div className="image">
@@ -47,7 +48,7 @@ export default function Home() {
 					<section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div className="content">
 							<h2>AI application development</h2>
-							<p>I led end-to-end frontend development of a React-based AI chat application, from Figma UX design through API integration, Azure DevOps CI/CD, and Azure deployment.</p>
+							<p>I led end-to-end frontend development of a React-based AI chat application, from Figma UX design through API integration, Azure DevOps CI/CD, and Azure SWA Deployment.</p>
 						</div>
 						<div className="image">
 							<img src="./images/ai-app.png" alt="" />

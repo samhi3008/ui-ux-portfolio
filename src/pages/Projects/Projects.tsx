@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import "./Projects.css";
 
 const projects = [
   {
@@ -35,9 +36,13 @@ const projects = [
     imageId: "06",
     title: "AI-Powered Chat Application",
     url: "https://ashy-water-0708a8000.7.azurestaticapps.net/",
+    requiresPassword: true,
     description: "Designed the Figma UX and built the React frontend end to end. Delivered an initial working skeleton within three weeks, then added MSAL authentication, API integration, deployment, and Azure DevOps CI/CD pipelines.",
   },
 ] as const;
+
+type Project = (typeof projects)[number];
+const projectAccessPassword = import.meta.env.VITE_PROJECT_ACCESS_PASSWORD;
 
 export default function Projects() {
   const galleryRef = useRef<HTMLDivElement>(null);
@@ -49,11 +54,20 @@ export default function Projects() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [pendingProject, setPendingProject] = useState<Project | null>(null);
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
   const closeLightbox = useCallback(() => {
     setIsImageLoaded(false);
     setIsModalVisible(false);
     closeTimerRef.current = setTimeout(() => setSelectedImage(null), 500);
+  }, []);
+
+  const closePasswordDialog = useCallback(() => {
+    setPendingProject(null);
+    setPassword("");
+    setPasswordError("");
   }, []);
 
   useEffect(() => {
@@ -103,6 +117,17 @@ export default function Projects() {
     if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
   }, []);
 
+  useEffect(() => {
+    if (!pendingProject) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closePasswordDialog();
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [closePasswordDialog, pendingProject]);
+
   const scrollGallery = (amount: number) => {
     scrollAreaRef.current?.scrollBy({ left: amount, behavior: "smooth" });
   };
@@ -124,6 +149,29 @@ export default function Projects() {
     setIsImageLoaded(false);
     setSelectedImage(image);
     setIsModalVisible(true);
+  };
+
+  const requestProjectAccess = (project: Project) => {
+    setPassword("");
+    setPasswordError("");
+    setPendingProject(project);
+  };
+
+  const unlockProject = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!projectAccessPassword) {
+      setPasswordError("Access is not configured yet. Please contact Samhita directly.");
+      return;
+    }
+
+    if (password !== projectAccessPassword) {
+      setPasswordError("That password is incorrect. Please try again.");
+      return;
+    }
+
+    if (pendingProject) window.open(pendingProject.url, "_blank", "noopener,noreferrer");
+    closePasswordDialog();
   };
 
   return (
@@ -148,7 +196,9 @@ export default function Projects() {
         />
 
         <div ref={scrollAreaRef} className="inner">
-          {projects.map(({ imageId, title, url, description }) => {
+          {projects.map((project) => {
+            const { imageId, title, url, description } = project;
+            const requiresPassword = "requiresPassword" in project && project.requiresPassword;
             const image = `./images/gallery/thumbs/${imageId}.png`;
             return (
               <article key={title}>
@@ -159,7 +209,13 @@ export default function Projects() {
                   <h3>{title}</h3>
                   <p>{description}</p>
                   <ul className="actions fixed">
-                    <li><a className="button small" href={url} target="_blank" rel="noreferrer">Visit site</a></li>
+                    <li>
+                      {requiresPassword ? (
+                        <button type="button" className="button small button--enter-pwd" onClick={() => requestProjectAccess(project)}>Enter Password</button>
+                      ) : (
+                        <a className="button small" href={url} target="_blank" rel="noreferrer">Visit site</a>
+                      )}
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -194,6 +250,22 @@ export default function Projects() {
           </div>
         )}
       </div>
+
+      {pendingProject && (
+        <div className="project-access-dialog" role="dialog" aria-modal="true" aria-labelledby="project-access-title" onMouseDown={(event) => { if (event.target === event.currentTarget) closePasswordDialog(); }}>
+          <form className="project-access-dialog__card" onSubmit={unlockProject}>
+            <h2 id="project-access-title">Protected project</h2>
+            <p>Enter the password shared with you to visit {pendingProject.title}.</p>
+            <label htmlFor="project-password">Password</label>
+            <input id="project-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} autoComplete="current-password" autoFocus required />
+            {passwordError && <p className="project-access-dialog__error" role="alert">{passwordError}</p>}
+            <div className="project-access-dialog__actions">
+              <button type="button" onClick={closePasswordDialog}>Cancel</button>
+              <button type="submit" className="primary">Continue</button>
+            </div>
+          </form>
+        </div>
+      )}
     </section>
   );
 }
